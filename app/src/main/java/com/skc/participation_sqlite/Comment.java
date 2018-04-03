@@ -4,6 +4,16 @@ public class Comment {
     private long id;
     private String comment;
 
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    private String rating;
+
     public long getId() {
         return id;
     }
@@ -23,6 +33,6 @@ public class Comment {
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
-        return comment;
+        return comment + ":" + rating;
     }
 }
